@@ -1,4 +1,4 @@
-Need to place GlobalCorrelator_HLS code in src. 
+Need to place GlobalCorrelator_HLS code (or a link) in src. 
 
 Eg.
 ```
