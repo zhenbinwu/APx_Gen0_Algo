@@ -50,11 +50,11 @@ void algo_unpacked(ap_uint<192> link_in[N_CH_IN], ap_uint<192> link_out[N_CH_OUT
 	for (int lnk = 0; lnk < N_CH_OUT; lnk++) {
 #pragma HLS UNROLL
                 
-		link_out[lnk].range(31 ,   0) = link_in[lnk].range(31,  0);
-		link_out[lnk].range(63 ,  32) = data_out[lnk+N_CH_OUT*0];
-		link_out[lnk].range(95 ,  64) = data_out[lnk+N_CH_OUT*1];
-		link_out[lnk].range(127,  96) = data_out[lnk+N_CH_OUT*2];
-		link_out[lnk].range(159, 128) = data_out[lnk+N_CH_OUT*3];
-		link_out[lnk].range(191, 160) = data_out[lnk+N_CH_OUT*4];
+		link_out[lnk].range(31 ,   0) = 0;
+		link_out[lnk].range(63 ,  32) = data_out[lnk*5+0];
+		link_out[lnk].range(95 ,  64) = data_out[lnk*5+1];
+		link_out[lnk].range(127,  96) = data_out[lnk*5+2];
+		link_out[lnk].range(159, 128) = data_out[lnk*5+3];
+		link_out[lnk].range(191, 160) = data_out[lnk*5+4];
 	}
 }
