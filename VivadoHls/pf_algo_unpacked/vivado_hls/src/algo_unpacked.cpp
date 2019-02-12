@@ -33,11 +33,16 @@ void algo_unpacked(ap_uint<192> link_in[N_CH_IN], ap_uint<192> link_out[N_CH_OUT
 	for (int lnk = 0; lnk < N_CH_IN; lnk++) {
 #pragma HLS UNROLL
                 
-		data_in[lnk+N_CH_IN*0] = link_in[lnk].range( 63,  32);
-		data_in[lnk+N_CH_IN*1] = link_in[lnk].range( 95,  64);
-		data_in[lnk+N_CH_IN*2] = link_in[lnk].range(127,  96);
-		data_in[lnk+N_CH_IN*3] = link_in[lnk].range(159, 128);
-		data_in[lnk+N_CH_IN*4] = link_in[lnk].range(191, 160);
+		//data_in[lnk+N_CH_IN*0] = link_in[lnk].range( 63,  32);
+		//data_in[lnk+N_CH_IN*1] = link_in[lnk].range( 95,  64);
+		//data_in[lnk+N_CH_IN*2] = link_in[lnk].range(127,  96);
+		//data_in[lnk+N_CH_IN*3] = link_in[lnk].range(159, 128);
+		//data_in[lnk+N_CH_IN*4] = link_in[lnk].range(191, 160);
+		data_in[lnk*5+0] = link_in[lnk].range( 63,  32);
+		data_in[lnk*5+1] = link_in[lnk].range( 95,  64);
+		data_in[lnk*5+2] = link_in[lnk].range(127,  96);
+		data_in[lnk*5+3] = link_in[lnk].range(159, 128);
+		data_in[lnk*5+4] = link_in[lnk].range(191, 160);
                 data_out[lnk+N_CH_IN*0] = 0;
                 data_out[lnk+N_CH_IN*1] = 0;
                 data_out[lnk+N_CH_IN*2] = 0;
