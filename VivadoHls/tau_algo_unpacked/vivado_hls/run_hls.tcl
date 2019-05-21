@@ -28,7 +28,7 @@ proc report_time { op_name time_start time_end  } {
 open_project -reset proj
 
 #Add sources and specify top function
-source "./sources.tcl"
+source "./sources2.tcl"
 
 #reset the solution
 #open_solution -reset "solution1"
