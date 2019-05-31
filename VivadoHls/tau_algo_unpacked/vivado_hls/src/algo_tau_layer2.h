@@ -9,7 +9,7 @@
 #include "GlobalCorrelator_HLS/puppi/firmware/simple_puppi.h"
 
 #define DATA_SIZE 128
-#define NTAU  1
+#define NTAU  5
 #define NREGIONS 36
 #define NPART 25
 #define DEPTH NREGIONS*2

@@ -10,7 +10,7 @@
 
 #define DATA_SIZE 128
 #define NTAU  5
-#define NREGIONS 12
+#define NREGIONS 36
 #define NPART 25
 #define DEPTH NREGIONS*2
 #define NTAUPARTS  10
